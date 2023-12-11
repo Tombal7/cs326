@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The browser prepends /client/ to the URLs below. -->
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+    <title>Basketball</title>
+  </head>
+  <body>
+    <header>
+        <img src = webLogo.png alt = "Logo" class = "logo">
+        <h1>Basketball</h1>
+        <nav>
+
+            <div class = "nav-links">
+                <div id = "editlink"><input type = "button" value = "Edit Players List" id = "edit"/></div>
+                <div id = "reslink"><input type = "button" value = "Results" id = "results"/></div>
+                <div id = "playerlink"><input type = "button" value = "Players" id = "players"/></div>
+                <div id = "hotClink"><input type = "button" value = "Hot & Cold" id = "hotCold"/></div>
+            </div>
+        </nav>
+    </header>
+    <div id="main-wrapper">
+      <div id = "favDiv">
+        <label for="favName"><b>New Favorite: </b></label><input type="text" id="favName" />
+        <div id = "addButton"><input type = "button" value = "Add Favorite" id = "addfavorite"/></div>
+        <div id = "buttonmsg"></div>
+        <div id = "addButton"><input type = "button" value = "Clear Favorites" id = "clearFav"/></div>
+        <div id = "addButton"><input type = "button" value = "Read All Players" id = "read"/></div>
+      </div>
+        <div id = "searchDiv">
+          <label for="searchText"><b>Search Players: </b></label><input type="text" id="searchText" />
+          <div id = "addButton"><input type = "button" value = "Search" id = "searchButton"/></div>
+        </div>
+        <div id="left">
+        
+        </div>
+        <div id="middle">
+        
+        </div>
+        <div id="bottom">
+        
+        </div>
+    </div>
+    
+
+  </body>
+</html>

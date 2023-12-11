@@ -1,0 +1,689 @@
+
+/* Header styles */
+header {
+  background-color: #1b1b1a;
+  padding: 50px;
+  color: #d57bfc;
+  position: relative;
+}
+
+/* Logo styles */
+.logo {
+  max-width: 100px;
+  position: absolute;
+  margin-top : -40px;
+
+}
+
+h1{
+    margin-top : -25px;
+    position: absolute;
+    margin-left: 150px;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+}
+
+.nav-links{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+#addButton{
+    background-color: #04AA6D;
+    border: none;
+    padding: 10px 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#addButton:hover{
+    background-color: #d57bfc;
+}
+
+#create-wrapper{
+    margin-top: 10px;
+    margin-left: 1000px;
+}
+
+#createPlayer{
+    background-color: #04AA6D;
+    margin-left: 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#createPlayer:hover{
+    background-color: #d57bfc;
+}
+
+#newAvg{
+    margin-left:10px;
+}
+#newLastGameDate{
+    margin-left:10px;
+}
+
+#update-wrapper{
+    margin-top: 10px;
+
+}
+
+#updateButton{
+    background-color: #04AA6D;
+    margin-top: -10px;
+    margin-left: 24px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#updateButton:hover{
+    background-color: #d57bfc;
+}
+
+#delete{
+    margin-top: 50px;
+
+}
+
+#deleteButton{
+    background-color: #04AA6D;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#deleteButton:hover{
+    background-color: #d57bfc;
+}
+
+#buttonmsg{
+    margin-left: 10px;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 900px;
+    margin-top: -60px;
+    color: red;
+
+}
+
+label{
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+}
+
+#favName{
+    background-color: #FFFFFF;
+    border: black 2px solid;
+    padding: 10px 25px;
+    margin-top: -25px;
+    text-align: left;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.nav-links #editlink{
+    background-color: #04AA6D;
+    border: none;
+    padding: 10px 25px;
+    margin-top: -25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.nav-links #editlink:hover{
+    background-color: #d57bfc;
+}
+
+.nav-links #hotClink{
+    background-color: #04AA6D;
+    border: none;
+    padding: 10px 25px;
+    margin-top: -25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.nav-links #hotClink:hover{
+    background-color: #d57bfc;
+}
+.nav-links #playerlink{
+    background-color: #04AA6D;
+    border: none;
+    padding: 10px 25px;
+    margin-top: -25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.nav-links #playerlink:hover{
+    background-color: #d57bfc;
+}
+
+.nav-links #reslink{
+    background-color: #04AA6D;
+    border: none;
+    padding: 10px 25px;
+    margin-top: -25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.leftHead{
+    word-spacing: 40px;
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+}
+
+.leftPic{
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+}
+
+.leftName{
+    margin-left: auto;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: cornflowerblue;
+
+}
+
+.leftOpp{
+    margin-left: auto;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+
+}
+
+.leftProj{
+    margin-left: auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: #d57bfc;
+}
+
+.leftPts{
+    margin-left: auto;
+    
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color:#000000;
+    font-size: 20px;
+}
+
+.leftDiffG{
+    margin-left: auto;
+    
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: green;
+    font-size: 20px;
+}
+
+.leftDiffB{
+    margin-left: auto;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: red;
+    font-size: 20px;
+
+}
+
+.middleHead{
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+}
+
+.MidPlayerPic{
+    display: block;
+    margin-left: 15px;
+    
+    width: 10%;
+}
+
+.middlePlayers{
+    margin-left: 2%;
+    margin-top: 5%;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: cornflowerblue;
+    position: relative;
+}
+
+.midPlayerText{
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 15%
+}
+
+.midPlayerViewMore{
+    position: absolute;
+    margin-top: -22px;
+    margin-left: 80%
+}
+
+.middleHeadRes{
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+
+}
+
+.middleRes{
+    margin-left: 2%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: cornflowerblue;
+    position: relative;
+
+}
+
+.midPlayerName{
+    margin-left: 160px;
+    margin-top: -75px;
+    font-size: 28px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: cornflowerblue;
+    position: relative;
+    width:20%;
+}
+
+.midPlayerNameGiannis{
+    margin-left: 160px;
+    margin-top: -75px;
+    font-size: 28px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: cornflowerblue;
+    position: relative;
+    width: 20%;
+}
+
+.midPlayerOpp{
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 160px;
+    font-size: 20px;
+    color:#000000;
+}
+
+.midPlayerProj{
+    position: absolute;
+    margin-top: -64px;
+    margin-left: 400px;
+    color: #d57bfc;
+
+}
+
+.midPlayerPts{
+    position: absolute;
+    margin-top: -64px;
+    margin-left: 700px;
+    color:#000000;
+}
+
+.midDiffB{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 525px;
+    color:red;
+}
+
+.midDiffG{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 525px;
+    color:green;
+}
+
+.bottomHot{
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+    color: lightsalmon;
+}
+
+.bottomCold{
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+    color:lightskyblue;
+
+}
+
+.bottomHotPic{
+    display: block;
+    margin-left: -25px;
+    
+    width: 20%;
+
+}
+
+.bottomHotPlayerPic{
+    display: block;
+    margin-left: 250px;
+    position: relative;
+    margin-top: -180px ;
+    width: 18%;
+
+}
+
+.bottomPlayerViewMore{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 320px;
+}
+
+.bottomHotStreak{
+    position: absolute;
+    margin-left: 13%;
+    margin-top: -80px;
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: lightsalmon;
+}
+
+.bottomHotAvgDiffG{
+    margin-left: 80px;
+    margin-top: 60px ;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: green;
+    position: absolute;
+    width: 30%;
+}
+
+.bottomHotAvgDiffB{
+    margin-left: 80px;
+    margin-top: 60px ;
+    font-size: 32px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: red;
+    position: absolute;
+    width: 30%;
+}
+.bottomColdPic{
+    display: block;
+    margin-left: 50%;
+    margin-top: -100px ;
+    width: 15%;
+
+}
+
+.bottomColdPlayerPic{
+    display: block;
+    margin-left: 875px;
+    position: relative;
+    margin-top: -182px ;
+    width: 18%;
+
+}
+
+.bottomPlayerViewMore2{
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 940px;
+}
+
+.bottomColdStreak{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -81px;
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: lightskyblue;
+}
+
+.bottomColdAvgDiffG{
+    margin-left: 680px;
+    margin-top: 60px ;
+    font-size: 32px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: green;
+    position: absolute;
+    width: 30%;
+}
+
+.bottomColdAvgDiffB{
+    margin-left: 680px;
+    margin-top: 60px ;
+    font-size: 32px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: red;
+    position: absolute;
+    width: 30%;
+}
+
+.bottomFavPic{
+    display: block;
+    margin-left: 10px;
+    margin-top: -5px ;
+    width: 20%;
+}
+
+.bottomFavName{ 
+    margin-left: 225px;
+    margin-top: -160px ;
+    width: 20%;
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: #d57bfc;
+    position: relative;
+}
+
+.bottomFavOpp{
+    margin-left: 585px;
+    margin-top: -105px ;
+    
+    font-size: 42px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+    position: relative;
+}
+
+.bottomFavProj{
+    margin-left: 525px;
+    margin-top: -160px ;
+    font-size: 42px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: cornflowerblue;
+
+}
+
+.bottomFavPts{
+    margin-left: 850px;
+    margin-top: -95px ;
+    width: 20%;
+    font-size: 42px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+
+}
+
+.bottomDiffB{
+    margin-left: 850px;
+    margin-top: -27px ;
+    font-size: 36px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: red;
+
+}   
+
+.bottomDiffG{
+    margin-left: 850px;
+    margin-top: -27px ;
+    font-size: 36px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: green;
+
+}
+
+.vmImg{
+    display: block;
+    margin-left: 42%;
+    margin-bottom: 10px ;
+    width: 16%;
+}
+
+.vmHead{
+    margin-left: 10px;
+    margin-top: 5px ;
+    font-size: 32px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+    position: relative;
+
+
+}
+
+.viewMoreText{
+    margin-top: -8px ;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: #d57bfc;
+    position: relative;
+
+}
+
+#searchDiv{
+    margin-left: 1150px;
+    margin-top: -50px;
+}
+
+.newLastFive{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+
+}
+
+.createLabels{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    color: #000000;
+
+
+}
+
+#game1{
+    margin-top: -125px;
+    margin-left: 10px;
+    color: #000000;
+
+}
+#game5{
+    margin-top: 15px;
+    margin-left: 10px;
+    color: #000000;
+
+
+}
+
+#newNextOpp{
+    margin-left:10px;
+}
+
+#searchText{
+    background-color: #FFFFFF;
+    border: black 2px solid;
+    padding: 10px 25px;
+    margin-top: -25px;
+    margin-right: 10px;
+    text-align: left;
+    display: inline-block;
+    font-size: 12px;
+    width: 150px;
+}
+
+#favDiv{
+    margin-left: -100px;
+    
+}
+
+.nav-links #reslink:hover{
+    background-color: #d57bfc;
+}
+
+
+#left{
+margin-top: 10px;
+position: absolute;
+height: 825px;
+width: 20%;
+border: #d57bfc 5px solid;
+}
+
+#middle{
+position:absolute;
+margin-top: 10px;
+margin-left: 20.25%;
+height: 550px;
+width: 1200px;
+border: #d57bfc 5px solid;
+}
+
+#bottom{
+position:absolute;
+margin-top:565px;
+margin-left: 20.25%;
+height: 270px;
+width: 1200px;
+border: #d57bfc 5px solid;
+}
+
+#main-wrapper{
+    position: relative;
+    margin-left: 7%;
+}
