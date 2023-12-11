@@ -2,6 +2,8 @@ import { playerList } from "./playerList.js";
 const pl = playerList;
 pl.loadPlayers();
 
+//functions to calculate projections and streaks
+
 function calcStreak(player){
     let streak = 0;
     let i = 4;

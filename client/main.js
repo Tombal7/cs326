@@ -21,8 +21,6 @@ const searchElement = document.getElementById('searchButton');
 const editElement = document.getElementById('edit');
 const readElement = document.getElementById('read');
 
-const tatumViewMore = document.getElementById('viewMoreJayson Tatum');
-
 
 const favs = new Favorites();
 const result = new Result();
@@ -126,7 +124,7 @@ editElement.addEventListener('click', () => {
         editmsg.innerHTML = '<p>Player Created!</p>';
         playerList.loadPlayers();
     });
-
+    //event listener for update player
     updatePlayer.addEventListener('click', () => {
         editmsg.innerHTML = '';
         console.log('clicked update player');
@@ -147,7 +145,7 @@ editElement.addEventListener('click', () => {
         editmsg.innerHTML = '<p>Player Updated!</p>';
         playerList.loadPlayers();
     });
-
+    //event listener for delete player
     deletePlayer.addEventListener('click', () => {
         editmsg.innerHTML = '';
         console.log('clicked delete player');
@@ -200,7 +198,7 @@ favElement.addEventListener('click', () => {
     hotC.renderBottom(bottomElement);
     
 });
-
+//clear fav
 clearFavElement.addEventListener('click', () => {
     editElement.innerHTML = '';
     console.log('clicked clear favorites');
@@ -209,7 +207,7 @@ clearFavElement.addEventListener('click', () => {
     favs.renderMiddle(middleElement);
     hotC.renderBottom(bottomElement);4
     msgElement.innerHTML = '<p>Favorites cleared!</p>';
-    //results render left and hot cold render bottom
+    
 });
 
 //SEarch

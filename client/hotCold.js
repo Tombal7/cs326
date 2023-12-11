@@ -4,6 +4,7 @@ import { calcProjSingle, calcStreak } from "./stats.js";
 await playerList.loadPlayers();
 
 export class HotCold{
+    //Rendering hot and cold players and functions for finding hottest/coldest streaks
     constructor(){
         this.sorted = this.extremes();
         this.hotPlayers = this.sorted.hottest;
@@ -26,6 +27,7 @@ export class HotCold{
 
 
     extremes(){
+        //sorts players by streak and returns hottest and coldest Threes never used but could be used for a top three hottest/coldest
         let ex = playerList.players.sort((a,b) => calcStreak(b) - calcStreak(a)).slice(0,3);
         ex = ex.map(p => calcStreak(p));
         let hottest = ex[0];
@@ -54,11 +56,7 @@ export class HotCold{
             div.innerHTML += `<img src = 'flame.png' class = 'bottomHotPic'></img>`;
             div.innerHTML += `<h2 class = "bottomHotStreak">x ${calcStreak(this.hotPlayer)}</h2>`;
             div.innerHTML += `<img src = ${this.hotPlayer.image} class = 'bottomHotPlayerPic'></img>`;
-            /*
-            let buttonID = 'viewMore' + this.hotPlayer.name;
-            div.innerHTML += `<input type = "button" class = "bottomPlayerViewMore" value = "View More" id = ${buttonID}/></div>`;
-            */
-           
+
             element.appendChild(div);
 
         const div2 = document.createElement('div');
@@ -66,10 +64,6 @@ export class HotCold{
         div.innerHTML += `<img src = 'ice.png' class = 'bottomColdPic'></img>`;
         div.innerHTML += `<h2 class = "bottomColdStreak">x ${Math.abs(calcStreak(this.coldPlayer))}</h2>`;
         div.innerHTML += `<img src = ${this.coldPlayer.image} class = 'bottomColdPlayerPic'></img>`;
-        /*
-        buttonID = 'viewMore' + this.hotPlayer.name;
-        div.innerHTML += `<input type = "button" class = "bottomPlayerViewMore2" value = "View More" id = ${buttonID}/></div>`;
-        */
         
         element.appendChild(div);
     }
@@ -85,10 +79,6 @@ export class HotCold{
             div.innerHTML += `<img src = 'flame.png' class = 'bottomHotPic'></img>`;
             div.innerHTML += `<h2 class = "bottomHotStreak">x ${calcStreak(this.hotPlayer)}</h2>`;
             div.innerHTML += `<img src = ${this.hotPlayer.image} class = 'bottomHotPlayerPic'></img>`;
-            /*
-            let buttonID = 'viewMore' + this.hotPlayer.name;
-            div.innerHTML += `<input type = "button" class = "bottomPlayerViewMore" value = "View More" id = ${buttonID}/></div>`;
-            */
             
             let avgDiff = this.hotPlayer.lastFive.reduce((acc,curr) => acc + (curr -calcProjSingle(this.hotPlayer)), 0)/5;
             if(avgDiff>=0){
@@ -105,10 +95,6 @@ export class HotCold{
         div.innerHTML += `<h2 class = "bottomColdStreak">x ${Math.abs(calcStreak(this.coldPlayer))}</h2>`;
         div.innerHTML += `<img src = ${this.coldPlayer.image} class = 'bottomColdPlayerPic'></img>`;
         
-        /*
-        buttonID = 'viewMore' + this.coldPlayer.name;
-        div.innerHTML += `<input type = "button" class = "bottomPlayerViewMore2" value = "View More" id = ${buttonID}/></div>`;
-            */
         let avgDiff2 = this.coldPlayer.lastFive.reduce((acc,curr) => acc + (curr -calcProjSingle(this.coldPlayer)), 0)/5;
             console.log("AVG DIFF",avgDiff2)
             if(avgDiff2>=0){

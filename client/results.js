@@ -2,6 +2,7 @@ import {favs} from "./favorites.js";
 import { calcOldProj } from "./stats.js";
 
 export class Result{
+    //renders for results page
     constructor(){
         let arr = favs.getFavorites();
         console.log(arr);
@@ -13,7 +14,7 @@ export class Result{
         return this.result;
     }
     renderLeft(element){
-        //element.innerHTML += '<div class="middle">';//change to picture of player, name, projection, view more
+        
         element.innerHTML ='';
         
         
@@ -46,9 +47,7 @@ export class Result{
     }
 
     renderMiddle(element){
-        //if(element === middleElement){}
-        //element.innerHTML += '<div class="middle">';//change to picture of player, name, projection, view more
-       
+        
         element.innerHTML ='';
         const tx = document.createElement('div');
         tx.innerHTML = `<h2 class = "middleHeadRes" >Results</h2>`;
@@ -79,17 +78,11 @@ export class Result{
                 div.innerHTML += `<h2 class = "midDiffG">Difference:  +${Math.abs(dif)}</h2>`;
             }
             
-            /*
-            let buttonID = 'viewMore' + favArr[i].name;
-            console.log("BUTTON ID",buttonID);
-            div.innerHTML += `<input type = "button" class = "midPlayerViewMore" value = "View More" id = ${buttonID}/></div>`;
-            */
             
             element.appendChild(div);
         }
     }
-        //element.innerHTML += '</ul>';
-        //element.innerHTML += '</div>';
+        
     }
 
 

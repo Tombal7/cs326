@@ -25,22 +25,8 @@ export class PlayerList {
      * @returns {boolean} Returns true if the dictionary is loaded successfully;
      * false otherwise.
      */
-    /*
     async loadPlayers() {
-      // TODO #1: Implement this method.
-        const response = await fetch('playerList.json');
-        if(!response.ok){
-          this.status = 'unavailable';
-          return false;
-        }
-        this.players = await response.json();
-        this.status = 'loaded';
-        return true;
-    }
-   */
-
-    async loadPlayers() {
-      const allPlayers = await crud.readAllPlayers();
+      const allPlayers = await crud.readAllPlayers();//fetches all players from server
 
       this.players = allPlayers.map(p => {
         return {
@@ -51,7 +37,7 @@ export class PlayerList {
           lastFive: [p.last1, p.last2, p.last3, p.last4, p.last5],
           avg: p.avg,
           nextOpp: p.nextopp
-        }
+        }//map to correct format for the variables used throughout client side
       });
       this.status = 'loaded';
     }

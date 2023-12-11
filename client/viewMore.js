@@ -4,7 +4,7 @@ import { playerList } from "./playerList.js";
 await playerList.loadPlayers();
 
 
-export class ViewMore{
+export class ViewMore{//view more page for each player used for search after view more buttons were scratced
     constructor(playerName){
         this.player = playerList.players.find(p => p.name === playerName);
         this.proj = stats.calcProjSingle(this.player);

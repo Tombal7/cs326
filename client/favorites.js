@@ -4,17 +4,14 @@ import { playerList } from "./playerList.js";
 await playerList.loadPlayers();
 
 export class Favorites{
+    //Players view and functions relating to favorites in local storage
     constructor(){
-        console.log(playerList);
-        console.log(playerList.players);
-        //this.fav = [playerList.players[0], playerList.players[1], playerList.players[2]];
-        //initialize three players
         this.fav = [];
+        //default three favorites
         this.fav.push(playerList.players.find(p => p.name === 'Jayson Tatum'));
         this.fav.push(playerList.players.find(p => p.name === 'Stephen Curry'));
         this.fav.push(playerList.players.find(p => p.name === 'Kevin Durant'));
         this.adds = 0;
-        console.log(this.fav);  
         //if localstorage update on that favorites
         if(window.localStorage.getItem('favArr') && JSON.parse(window.localStorage.getItem('favArr')).length>=3){
             this.fav = JSON.parse(window.localStorage.getItem('favArr'));
@@ -23,6 +20,7 @@ export class Favorites{
 
     clearFavorites(){
         this.fav = [];
+        //back to default and remove from local storage
         this.fav.push(playerList.players.find(p => p.name === 'Jayson Tatum'));
         this.fav.push(playerList.players.find(p => p.name === 'Stephen Curry'));
         this.fav.push(playerList.players.find(p => p.name === 'Kevin Durant'));
@@ -33,11 +31,11 @@ export class Favorites{
 
     addFavorite(playerName,element){//add favorite text input 
         //add to localstorage
+
+        //if elses deal with the fact there is a default list of favorites separate from local storage so that the deafaults can be added to favorites even though they are already there as defaults in this.fav
         this.adds++;
         element.innerHTML = '';
-        console.log("entered nameis: ",playerName);
         let newF = playerList.players.find(p => p.name === playerName);
-        console.log("resulkt of find",newF);
         let temp = JSON.parse(window.localStorage.getItem('favArr'));
         if(!newF){
             element.innerHTML += '<p>Player not found!</p>';
@@ -58,26 +56,24 @@ export class Favorites{
             if(fArr){
                 fArr.push(newF);
                 window.localStorage.setItem('favArr', JSON.stringify(fArr));
-                console.log("IF");
+                
             }else{
                 fArr = [newF];
                 window.localStorage.setItem('favArr', JSON.stringify(fArr));
-                console.log("Else");
+                
             }
             if(fArr.length>=3){
                 this.fav = fArr;
-                console.log("IF 2");
+                
             }
-            console.log("FAVARR",fArr.length);
+           
             element.innerHTML += `<p>${playerName} added to favorites!</p>`;
         }
-        //if llocal storage >= 3 favorites set this.fav to that list
-        //this.fav.push(id);//playerdatabase[id]
     }
     getFavorites(){
         let temp = JSON.parse(window.localStorage.getItem('favArr'));
         if(temp && temp.length>=3){
-            this.fav = temp;
+            this.fav = temp; //back up check to make sure this.fav is updated for other file renders
         }
         return this.fav;
     }
@@ -92,7 +88,7 @@ export class Favorites{
         if(i===3){
             return this.fav;
         }
-        while(j<3){
+        while(j<3){ //random three without repeats
             let pick = Math.floor(Math.random()*i);
             if(!pArr.includes(pick)){
                 pArr.push(pick);
@@ -100,13 +96,12 @@ export class Favorites{
             }
         }
         //pArr = 3 numbers
-        pArr = pArr.map(n => this.fav[n]);
+        pArr = pArr.map(n => this.fav[n]); //map from indexes to players
         return pArr;
     }
 
     renderMiddle(element){
-        //if(element === middleElement){}
-        //element.innerHTML += '<div class="middle">';//change to picture of player, name, projection, view more
+       
         element.innerHTML ='';
         const tx = document.createElement('div')
         tx.innerHTML = `<h2 class = "middleHead" >Players</h2>`;
@@ -122,16 +117,9 @@ export class Favorites{
             console.log(favArr[i]);
             let proj = stats.calcProjSingle(favArr[i]);
             div.innerHTML += `<h2 class = 'midPlayerText'>${favArr[i].name} Projected: ${proj} vs. ${favArr[i].nextOpp}</h2>`;
-            /*
-            let buttonID = 'viewMore' + favArr[i].name;
-            console.log("BUTTON ID",buttonID);
-            div.innerHTML += `<input type = "button" "class = "midPlayerViewMore" value = "View More" id = ${buttonID} /></div>`;
-            */
             
             element.appendChild(div);
         }
-        //element.innerHTML += '</ul>';
-        //element.innerHTML += '</div>';
     }
     renderLeft(element){
         element.innerHTML ='';
